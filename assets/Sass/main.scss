@@ -1,0 +1,896 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  html {
+    position: relative;
+    height: 100%;
+    font-size: 62.33%;
+  }
+  
+  body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  #dashboardPage{
+      .dashboardRow{
+        display: flex;
+        flex-wrap: wrap;
+        .sidenav {
+            display: flex;
+            flex-flow: column nowrap;
+            background: #fefefe;
+            color: #000;
+            padding: 4rem 0px 0px;
+            flex: 0 1 auto;
+            height: 100%;
+            max-width: 100%;
+            transition: width 250ms ease-out;
+            
+            border-right: .1rem solid #eaeaef;
+            &.is-collapsed {
+                width: 10rem;
+                #dashboardBody{
+                    width: 94.333333%;
+                  }
+                .logoText{
+                    opacity: 0;
+                    transform: translateX(1rem);
+                    transition-delay: 0s;
+                    display: none;
+                }
+                .nav__label {
+                    opacity: 0;
+                    transform: translateX(1rem);
+                    transition-delay: 0s;
+                  }
+                  .sidenav__button{
+                    gap: 0;
+                  }
+                  .upgradeInnerBox{
+                    opacity: 0;
+                  }
+                 
+              }
+              .sidenav__header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                 .sidenav__button{
+                    background: transparent;
+                    border: 0;
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 1rem;
+                    padding-left: 3.5rem;
+                    .logoText{
+                        font-family: "Harmonia Sans Mono W01 Bold";
+                        font-size: 2rem;
+                        font-weight: 700; 
+                    }
+                 }
+              }
+              .sidenav__nav {
+                width: 100%;
+            
+               
+                  .nav__list {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width:100%;
+                    margin-top: 8rem;
+                    padding-left: 4rem;
+                    gap: 4rem;
+                  
+                    .nav__item {
+                        position: relative;
+                       
+                        &.is-active{
+                            .nav__button{
+                                color: #000;
+                            }
+                            .nav__icon{
+                                i{
+                                    color: #5e81f4;
+                                }
+                            }
+                            &.nav__item{
+                                border-right: .2rem solid #5e81f4;
+                            }
+                        }
+                        &:hover{
+                            border-right: .2rem solid #5e81f4;
+                        }
+                        .nav__button {
+                            display: inline-flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
+                            padding: 0;
+                            background: none;
+                            color: #b8bcd5;
+                            border: 0;
+                            border-radius: 0.5rem;
+                            cursor: pointer;
+                            outline-offset: -2px;
+                            transition-property: background, color;
+                            transition-duration: 250ms;
+                            max-width: 100%;
+                            width: 100%;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            gap: 3rem;
+                            .nav__icon {
+                                height: 2.5rem;
+                                width: 2.5rem;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex: 0 0 auto;
+                                position: relative;
+                               .chatCount{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                background-color: #ff808b;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.2rem;
+                                color: #fefefe;
+                                border-radius: 5rem;
+                                position: absolute;
+                                top: -0.8rem;
+                                right: -0.3rem;
+                               }
+                                .fa {
+                                    aspect-ratio: 1;
+                                    font-size: 2.4rem;
+                                  }
+                              }
+                              .nav__label {
+                                display: inline-block;
+                                flex: 1;
+                                text-align: left;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                transition-property: opacity, transform;
+                                transition-duration: 250ms;
+                                transition-timing-function: ease-out;
+                                transition-delay: 100ms;
+                              }
+                              &:hover{
+                                .nav__icon{
+                                    i{
+                                        color: #5e81f4;
+                                    }
+                                }
+                                .nav__label{
+                                    color: #000;
+                                }
+                               
+                              }
+                          }
+                      }
+                  }
+              }
+              .upgradeMessageSection{
+                padding: 12rem 2rem 3rem;
+                .upgradeInnerBox{
+                    background: #f5f5fb;
+                    position: relative;
+                    border-radius: 2rem;
+                    .overflowImg{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img{
+                            margin-top: -3.8rem;
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+                    .uogradeTextWrap{
+                        padding: 2rem 2rem 3rem;
+                        p{
+                            font-size: 1.6rem;
+                            color: #ababc9;
+                            text-align: center;
+                            span{
+                                color: #000;
+                                font-weight: 700;
+                            }
+                        }
+                        button{
+                            width: 100%;
+                            height: 4rem;
+                            margin-top: 2rem;
+                            background: #5e81f4;
+                            border-radius: 1.2rem;
+                            border: 0;
+                            font-size: 1.8rem;
+                            color: #fff;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: 500;
+                            padding-bottom: 0.3rem;
+                        }
+                    }
+                }
+              }
+              
+          }
+          .dashboardBody{
+            transition: width 250ms ease-out;
+            display: flex;
+            flex-wrap: wrap;
+            &.fullWidthBox{
+                width: 93.4333333%;
+                // transition: width 250ms ease-out;
+            }
+          .dash_main{
+            background-color: #f5f5fb;
+          }
+            .mid_body_sectionWrap{
+                padding: 4rem 3rem 0;
+                .bodyTitleWrap{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h1{
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        margin-bottom: 0;
+                    }
+                    .datewithSearchWrap{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        width: 100%;
+                        p{
+                            color: #b4b4c5;
+                            font-size: 1.6rem;
+                            padding-right: 3rem;
+                            margin-bottom: 0;
+                        }
+                        .input-box {
+                            position: relative;
+                            width: 100%;
+                            max-width: 4rem;
+                            height: 4rem;
+                            margin: 0;
+                            background-color: #fff;
+                            border-radius: .6rem;
+                            transition: all 0.5s ease-in-out;
+                            &.open {
+                                max-width: 35rem;
+                                input {
+                                    padding: 0 1.5rem 0 6.5rem;
+                                  }
+                                  .search {
+                                    border-radius: .6rem 0 0 .6rem;
+                                  }
+                                  .close-icon {
+                                    transform: translateY(-50%) rotate(180deg);
+                                    pointer-events: auto;
+                                    opacity: 1;
+                                  }
+                              }
+                              input {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: #333;
+                                padding: 0 1.5rem;
+                                border: none;
+                                border-radius: .6rem;
+                                outline: none;
+                                transition: all 0.5s ease-in-out;
+                              }
+                              .search {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 4rem;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #e6eafa;
+                                border-radius: .6rem;
+                                cursor: pointer;
+                                i{
+                                    color: #5e81f4;
+                                    font-size: 1.6rem;
+                                }
+                                .search-icon {
+                                    font-size: 3rem;
+                                    color: #1c1c1c;
+                                    
+                                  }
+                              }
+                              .close-icon {
+                                position: absolute;
+                                top: 50%;
+                                right: -2rem;
+                                font-size: 1.5rem;
+                                color: #1c1c1c;
+                                padding: .5rem;
+                                transform: translateY(-50%);
+                                transition: all 0.5s ease-in-out;
+                                cursor: pointer;
+                                pointer-events: none;
+                                opacity: 0;
+                              }
+                          }
+
+                    }
+                   
+                }
+                .welcomeBackAnnaWrap{
+                    background: #f7e5e9;
+                    border-radius: 1.2rem;
+                    margin-top: 3.5rem;
+                    position: relative;
+                    .backWrapBox{
+                        display: flex;
+                        align-items: center;
+                        padding: 1.5rem 6rem;
+                        .annaTextWrap{
+                            h4{
+                                color: #fe707d;
+                                font-size: 2rem;
+                                margin-bottom: 2rem;
+                            }
+                            p{
+                                font-size: 1.4rem;
+                                margin-bottom: 0;
+                            }
+                        }
+                        .annaImgWrap{
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            img{
+                                width: 80%;
+                                height: auto;
+                                margin-top: -4.5rem;
+                            }
+                        }
+                    }
+                }
+                .dashboardDataBoxesWrap{
+                    margin-top: 3rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    // gap: 4.4rem;
+                    .leftBox{
+                        width: 44.666667%;
+                        .latestResult_wrap{
+                            padding: 2rem;
+                            border-radius: 1.2rem;
+                            background-color: #fdfdfe;
+                            .resultBoxTitle{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-bottom: 3rem;
+                                h5{
+                                    font-size: 1.4rem;
+                                    margin-bottom: 0;
+                                }
+                                p{
+                                    font-size: 1.2rem;
+                                    margin-bottom: 0;
+                                    cursor: pointer;
+                                    margin-top: 0.5rem;
+                                    font-weight: 500;
+                                    span{
+                                        padding-left: 1rem;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                            .resultListing{
+                                padding: 0;
+                                margin-bottom: 0;
+                                li{
+                                    list-style: none;
+                                    padding-bottom: 2rem;
+                                    border-bottom: 0.1rem solid #f1f1f4;
+                                    .resultListErap{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding-top: 2rem;
+                                        p{
+                                            font-size: 1.2rem;
+                                            font-weight: 500;
+                                            margin-bottom: 0;
+                                            span{
+                                                color: #b8bcd5;
+                                            }
+                                        }
+                                    }
+                                    .resultProgressBarWrap{
+                                        justify-content: space-between;
+                                        width: 40%;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 1rem;
+                                        .progress{
+                                            width: 100%;
+                                            height: 0.5rem;
+                                            .progress-bar{
+                                                width: 100%;
+                                                animation-name: animateBar;
+                                                animation-iteration-count: 1;
+                                                animation-timing-function: ease-in;
+                                                animation-duration: .6s;
+                                                &.coloPeech{
+                                                    background-color: #ff606d;
+                                                }
+                                                &.coloBlue{
+                                                    background-color: #5e81f4;
+                                                }
+                                            }
+                                        }
+                                        span{
+                                            font-weight: 800;
+                                        &.peechText{
+                                            color: #ff606d;
+
+                                        }
+                                        &.BlueText{
+                                            color: #5e81f4;
+
+                                        }
+                                        }
+                                        
+                                    }
+                                    &:first-child{
+                                        .resultListErap{
+                                            padding-top: 0;
+                                        }
+                                    }
+                                    &:last-child{
+                                        border-bottom: 0;
+                                        padding-bottom: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .rightBox{
+                        width: 52.333333%;
+                        .timeSpent_wrap{
+                            padding: 2rem;
+                            border-radius: 1.2rem;
+                            background-color: #fdfdfe;
+                            position: relative;
+                            height: 100%;
+                            .timeSpentTitle{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-bottom: 3rem;
+                                h5{
+                                    font-size: 1.4rem;
+                                    margin-bottom: 0;
+                                }
+                                p{
+                                    font-size: 1.2rem;
+                                    margin-bottom: 0;
+                                    cursor: pointer;
+                                    margin-top: 0.5rem;
+                                    font-weight: 500;
+                                    span{
+                                        padding-left: 1rem;
+                                        font-weight: 500;
+                                        
+                                    }
+                                }
+                            }
+                            .timeSpentData_wrap{
+                               
+                                .spentTimeListing{
+                                    padding-left: 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    li{
+                                        list-style: none;
+                                        .daysWrap{
+                                            // height: 25rem;
+                                            position: relative;
+                                            // width: 100%;
+                                            p{
+                                                font-size: 1.2rem;
+                                                font-weight: 500;
+                                                margin-bottom: 0;
+                                                color: #b8bcd5;
+                                            }
+                                            .progress{
+                                                transform: rotate(-90deg);
+                                                height: 0.5rem;
+                                                width: 17.5rem;
+                                                position: absolute;
+                                                left: -7.5rem;
+                                                top: 12.5rem;
+                                                .progress-bar{
+                                                // animation-name: animateBar;
+                                                // animation-iteration-count: 1;
+                                                // animation-timing-function: ease-in;
+                                                // animation-duration: .6s;
+                                                &.coloPeech{
+                                                    background-color: #ff606d;
+                                                }
+                                                &.coloDarkBlue{
+                                                    background-color: #4d4cac;
+                                                }
+                                                &.coloBlue{
+                                                    background-color: #5e81f4;
+                                                }
+                                                &.darkGray{
+                                                    background-color: #c8c9e9;
+                                                }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .barColorDesc{
+                                position: absolute;
+                                bottom: 2.2rem;
+                                width: 85%;
+                                .colorDescList{
+                                    padding-left: 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    margin-bottom: 0;
+                                    li{
+                                        list-style: none;
+                                        font-size: 1.2rem;
+                                        color: #b8bcd5;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 1rem;
+                                        span{
+                                            width: .8rem;
+                                            height: .8rem;
+                                            
+                                            border-radius: 5rem;
+                                            &.peechDot{
+                                                background-color: #ff606d;
+                                            }
+                                            &.darkBlueDot{
+                                                background-color: #4d4cac;
+                                            }
+                                            &.blueDot{
+                                                background-color: #5e81f4;
+                                            }
+                                            &.darkGrayDot{
+                                                background-color: #c8c9e9;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .yourCoursesWrap{
+                    margin-top: 3rem;
+                    .courseTitleWrap{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 3rem;
+
+                        h5{
+                            font-size: 1.4rem;
+                            margin-bottom: 0;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            margin-bottom: 0;
+                            cursor: pointer;
+                            margin-top: 1.5rem;
+                            font-weight: 500;
+                            span{
+                                padding-left: 1rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .courseBtnWrap{
+                        display: flex;
+                        justify-content: space-between;
+                        .col-md-4{
+                            width: 31.333333%;
+                            &:nth-child(1){
+                                .courseBtnBox{
+                                    background-color: #4d4cac;
+                                }
+                            }
+                            &:nth-child(2){
+                                .courseBtnBox{
+                                    background-color: #9698d6;
+                                }
+                            }
+                            &:nth-child(3){
+                                .courseBtnBox{
+                                    background-color: #ff808b;
+                                }
+                            }
+                        }
+                        .courseBtnBox{
+                           
+                            padding: 2rem;
+                            border-radius: 1.2rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: pointer;
+                            .courseIdWrap{
+                                width: 4rem;
+                                height: 4rem;
+                                background: #ffffff2b;
+                                border-radius: 1.2rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.4rem;
+                                color: #fff;
+                                font-weight: 500;
+                            }
+                            .courseDataWrap{
+                                width: 75%;
+                                span{
+                                    font-size: 1.1rem;
+                                    color: #fff;
+                                    font-weight: 100;
+                                }
+                                p{
+                                    font-size: 1.4rem;
+                                    font-weight: 500;
+                                    margin-bottom: 0;
+                                    margin-top: 0.5rem;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    color: #fff;
+                                    span{
+                                        margin-top: 0.5rem;
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .log_outSection{
+                    .innerLogoutSection{
+                        padding: 4rem 3rem 0;
+                        .logoutTitle{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 3rem;
+                            h5{
+                                font-size: 1.4rem;
+                                margin-bottom: 0;
+                                cursor: pointer;
+                            }
+                            span{
+                                img{
+                                    width: 85%;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .profileDataWrap{
+                            text-align: center;
+                            .profilePicSeter{
+                                border: .4rem solid #ececf2;
+                                width: 13rem;
+                                height: 13rem;
+                                margin: 0 auto;
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 25rem;
+                                img{
+                                    width: auto;
+                                    height: auto;
+                                }
+                                .addBtn{
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 1.5rem;
+                                    cursor: pointer;
+                                    i{
+                                        font-size: 2.4rem;
+                                        color: #5e81f4;
+                                    }
+                                }
+                            }
+                        }
+                        .userNameWrap{
+                            margin-top: 3rem;
+                            text-align: center;
+                            h6{
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                margin-bottom: 1rem;
+                             }
+                             span{
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: #b8bcd5;
+                             }
+                        }
+                        .courseCompleteWrap{
+                            margin-top: 5rem;
+                            ul{
+                                padding-left: 0;
+                                margin-bottom: 0;
+                                li{
+                                    list-style: none;
+                                    &:last-child{
+                                        .c_data{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                    .c_data{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        margin-bottom: 3rem;
+                                        .c_id{
+                                            width: 4rem;
+                                            height: 4rem;
+                                            background: #f5f5f7;
+                                            border-radius: 1.2rem;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-size: 1.4rem;
+                                            color: #000;
+                                            font-weight: 500;
+                                        }
+                                        .c_name{
+                                           
+                                            p{
+                                                font-size: 1.4rem;
+                                                font-weight: 500;
+                                            }
+                                            span{
+                                                font-size: 1.2rem;
+                                                font-weight: 400;
+                                                color: #b8bcd5;
+                                            }
+                                        }
+                                        .c_progress{
+                                            width: 30%;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            .progress{
+                                                width: 100%;
+                                                height: 0.5rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .reminderWrap{
+                            margin-top: 6rem;
+                            .reminderSectionTitle{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 3rem;
+                                h5{
+                                    font-size: 1.4rem;
+                                    margin-bottom: 0;
+                                }
+                                span{
+                                    color: #b8bcd5;
+                                    font-size: 1.8rem;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        width: 0.4rem;
+                                        height: 0.4rem;
+                                        background-color: red;
+                                        border-radius: 5rem;
+                                        position: absolute;
+                                        top: .5rem;
+                                        right: .3rem;
+                                    }
+                                }
+                            }
+                            .remindersData_Wrap{
+                                ul{
+                                    padding-left: 0;
+                                    margin: 0;
+                                    // height: 30rem;
+                                    // overflow-y: auto;                                
+                                    li{
+                                        list-style: none;
+                                        margin-bottom: 3rem;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                        .remindersList{
+                                            display: flex;
+                                            gap: 1.4rem;
+                                            .reminder_remarkWrap{
+                                                width: 4rem;
+                                                height: 4rem;
+                                                background: #eef2fd;
+                                                border-radius: 1.2rem;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                font-size: 1.4rem;
+                                               
+                                                font-weight: 500;
+                                                span{
+                                                    i{
+                                                        font-size: 1.6rem;
+                                                        color: #5e81f4;
+                                                    }
+                                                }
+                                            }
+                                            .reminderData{
+                                                p{
+                                                    font-size: 1.4rem;
+                                                    font-weight: 500;
+                                                    margin-bottom: 0.4rem;
+                                                }
+                                                span{
+                                                    font-size: 1.2rem;
+                                                    font-weight: 400;
+                                                    color: #b8bcd5;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+          }
+          
+      }
+  }
+
+//   Animation 
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
